@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Reports</title>
+  <meta name="description" content="View feedback statistics and reports">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">Feedback<span>System</span></div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+  <div class="admin-page">
+    <aside class="sidebar glass">
+      <h3>Admin Dashboard</h3>
+      <p>Analyze and export detailed feedback reports across different sections.</p>
+      <button id="exportExcel" class="big-btn" style="margin-top: 1rem;">Export to Excel</button>
+      <button id="exportPDF" class="big-btn">Export to PDF</button>
+    </aside>
+    <section class="admin-content glass report-section">
+      <div class="chart-card glass">
+        <h3>Performance Breakdown</h3>
+        <canvas id="ratingsPieChart" width="250" height="250"></canvas>
+        <div class="chart-labels">
+          <span style="color:var(--danger); border-color:var(--danger);">Poor</span>
+          <span style="color:#f59e0b; border-color:#f59e0b;">Fair</span>
+          <span style="color:var(--accent-2); border-color:var(--accent-2);">Good</span>
+          <span style="color:#a855f7; border-color:#a855f7;">Very Good</span>
+          <span style="color:var(--success); border-color:var(--success);">Excellent</span>
+        </div>
+      </div>
+      <h2 style="align-self: flex-start;">Feedback Submissions</h2>
+      <div style="overflow-x: auto; width: 100%;">
+        <table class="table" id="feedbackTable">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Section</th>
+              <th>Faculty</th>
+              <th>Subject</th>
+              <th>Rating</th>
+              <th>Comments</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/reports.js"></script>
+</body>
+</html>

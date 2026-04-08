@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Faculty</title>
+  <meta name="description" content="Select faculty for evaluation">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="nav">
+    <div class="logo">Feedback<span>System</span></div>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </div>
+  
+  <div class="container-page" style="display: block;">
+    <div class="select-row" id="chooseType">
+      <button class="big-btn" id="showTheory" style="min-width: 200px;">Theory Classes</button>
+      <button class="big-btn" id="showLabs" style="min-width: 200px; background: linear-gradient(135deg, #3b82f6, #06b6d4);">Lab Sessions</button>
+    </div>
+
+    <div id="facultySection" style="display:none; animation: slideUpFade 0.5s ease forwards;">
+      <h2 style="text-align:center; font-size: 2.5rem; margin-top: 2rem;">Choose Faculty</h2>
+      <p style="text-align:center; color: var(--text-muted); margin-bottom: 2rem;">Select the faculty member you wish to evaluate</p>
+      <div class="faculty-grid" id="facultyGrid"></div>
+    </div>
+  </div>
+
+  <script src="js/faculty.js"></script>
+</body>
+</html>
