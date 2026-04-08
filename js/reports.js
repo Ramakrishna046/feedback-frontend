@@ -1,4 +1,4 @@
-const API_BASE = 'https://d2jukolqvoix3.cloudfront.net';
+const API_BASE = 'https://dx3ma91rqdaic.cloudfront.net';
 
 // Pie chart for ratings (1–5)
 function drawPieChart(feedbacks) {
