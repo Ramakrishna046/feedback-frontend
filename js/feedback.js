@@ -1,4 +1,4 @@
-const API_BASE = 'https://d2jukolqvoix3.cloudfront.net';
+const API_BASE = 'https://dx3ma91rqdaic.cloudfront.net';
 const rollNumber = localStorage.getItem('rollNumber');
 const section = localStorage.getItem('section');
 document.getElementById('rollNumber').value = rollNumber || '';
